@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import { PageContent } from 'components'
+import Main from 'phone_store/Main'
 
 import { flashSuccess } from 'site/actions'
 
@@ -17,6 +18,7 @@ class Home extends React.Component {
   render() {
     return (
       <PageContent>
+        <Main></Main>
       </PageContent>
     )
   }
