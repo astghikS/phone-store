@@ -71,6 +71,7 @@ const routes = [
     key: ROUTES.Home,
     path: '/',
     component: Home,
+    routeComponent: ProtectedRoute,
   },
   {
     key: ROUTES.Login,
