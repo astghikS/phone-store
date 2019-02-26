@@ -53,8 +53,8 @@ Dependencies:
 
 ```bash
 # install
-$ git clone git@github.com:briancappello/flask-react-spa.git
-$ cd flask-react-spa
+$ git clone https://github.com/astghikS/phone-store.git
+$ cd phone-store
 
 # configure (the defaults are fine for development)
 $ edit `backend/config.example.py` and save as `backend/config.py`
@@ -88,9 +88,9 @@ Dependencies:
 
 ```bash
 # install
-$ git clone git@github.com:briancappello/flask-react-spa.git
-$ cd flask-react-spa
-$ mkvirtualenv -p /path/to/python3 flask_react_spa
+$ git clone https://github.com/astghikS/phone-store.git
+$ cd phone-store
+$ mkvirtualenv -p /path/to/python3 venv
 $ pip install -r requirements.txt
 $ pip install -r requirements-dev.txt  # for tests and sphinx docs
 
