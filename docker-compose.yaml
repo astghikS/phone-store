@@ -17,7 +17,6 @@ services:
     entrypoint:
       - /frontend-entrypoint.sh
     volumes:
-      - ./articles:/flask/articles
       - ./frontend:/flask/frontend
 
   mailhog:
