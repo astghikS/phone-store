@@ -11,5 +11,4 @@ do
     sleep 2
 done
 
-python3 manage.py blog import_articles --reset
 python3 manage.py run --host 0.0.0.0 --port 5000

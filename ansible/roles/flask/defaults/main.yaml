@@ -13,7 +13,6 @@ venv_exec: '{{ project_virtualenv_dir }}/bin/venv_exec'
 project_dir: '{{ project_virtualenv_dir }}/{{ project_name }}'
 requirements_path: '{{ project_dir }}/requirements.txt'
 static_dir_name: 'static'
-articles_dir_name: 'articles'
 
 __all_the_env_vars__:
   FLASK_ENV: '{{ FLASK_ENV | default(omit) }}'

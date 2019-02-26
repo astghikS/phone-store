@@ -18,7 +18,6 @@ Run `python manage.py`:
      --help              Show this message and exit
 
    Commands:
-     blog    Blog bundle commands.
      celery  Start the celery worker and/or beat.
      clean   Recursively remove *.pyc and *.pyo files.
      db      Perform database migrations.
@@ -29,10 +28,6 @@ Run `python manage.py`:
      url     Show details for a specific URL.
      urls    List all URLs registered with the app.
      users   User commands.
-
-.. click:: backend.blog.commands:blog
-   :prog: python manage.py blog
-   :show-nested:
 
 .. click:: backend.commands:celery
    :prog: python manage.py celery
