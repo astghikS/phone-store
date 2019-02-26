@@ -7,7 +7,7 @@ frontend/app/config.js
 *.py[cod]
 *.sqlite
 backend/config.py
-celerybeat-schedule
+celerybeat-schedule.db
 celerybeat.pid
 
 ansible/.password
@@ -53,4 +53,9 @@ output/*/index.html
 
 # Sphinx
 docs/_build
+
+#
+.vscode/
+venv/
+package-lock.json
 
