@@ -1,58 +1,55 @@
 import React from 'react'
-import axios from 'axios'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { flashSuccess } from 'site/actions'
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
+import {flashSuccess} from 'site/actions'
 import './phone_list.scss'
 import phonesList from './phones_list.json'
 
-
-
-
 class Phone_list extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            phonesList: []
-        };
-    }
-
     componentWillMount() {
         if (window.location.search.indexOf('welcome') > 0) {
-            this.props.flashSuccess('Welcome!')
+            this
+                .props
+                .flashSuccess('Welcome!')
         }
     }
 
     render() {
-        let phonsListBlock = '';
- 
-        if(phonesList.length > 0) {
-            phonsListBlock = phonesList.map( obj => {
+        let phonsListBlock_cols = '';
+
+        if (phonesList.length > 0) {
+            phonsListBlock_cols = phonesList.map(obj => {
                 return (
-                    <div key={obj.age} className="three cols">
-                        <div className="content">
-                            <img src={obj.imageUrl} alt="Phone"></img>
-                            <h3>{obj.name}</h3>
-                        </div>
+                    <div key={obj.age} className="four cols">
+                        <img src={"http://localhost:5000/static/" + obj.imageUrl} alt="Phone"></img>
+                        <h3>{obj.name}</h3>
                     </div>
                 )
- 	        })
+            })
         }
+        let phonsListBlock_rows = []
+        const size = 3;
+        while (phonsListBlock_cols.length > 0) {
+            phonsListBlock_rows.push(phonsListBlock_cols.splice(0, size));
+        }
+        phonsListBlock_rows = phonsListBlock_rows.map((obj, i) => {
+            return (
+                <div key={i} className="row">
+                    {obj}
+                </div>
+            )
+        })
         return (
-        <div>
-            <div className="main">
-                <div className="row">
-                    {phonsListBlock}
-                </div>    
+            <div>
+                <div className="main">
+                    {phonsListBlock_rows}
+                </div>
             </div>
-        </div>
 
         )
     }
 }
 
-export default connect(
-  (state) => ({}),
-  (dispatch) => bindActionCreators({ flashSuccess }, dispatch),
-)(Phone_list)
-
+export default connect((state) => ({}), (dispatch) => bindActionCreators({
+    flashSuccess
+}, dispatch),)(Phone_list)
