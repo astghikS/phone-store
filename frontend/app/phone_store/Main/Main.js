@@ -3,6 +3,8 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import Phone_list from 'phone_store/Phone_list'
 import {flashSuccess} from 'site/actions'
+import { NavLink } from 'react-router-dom'
+import { ROUTES } from 'routes'
 import './main.scss'
 
 class Main extends React.Component {
@@ -13,10 +15,7 @@ class Main extends React.Component {
                     <h1>PHONESTORE.COM</h1>
                     <hr></hr>
                     <div className="row">
-                        <a href="#" className="button button-primary">Anchor Link Button</a>
-                        <button className="button-primary">Button Element</button>
-                        <input type="submit" className="button-primary" value="Submit Input"/>
-                        <input type="button" className="button-primary" value="Button Input"/>
+                        <NavLink to="/phone/new"><button className="button-primary">ADD</button></NavLink>
                     </div>
                     <h2>PRODUCTS</h2>
                     <Phone_list></Phone_list>
