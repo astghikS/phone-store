@@ -21,6 +21,10 @@ import {
   Styles,
 } from 'site/pages'
 
+import {
+  New,
+} from 'phone_store/pages'
+
 import { AnonymousRoute, ProtectedRoute } from 'utils/route'
 
 
@@ -34,6 +38,7 @@ export const ROUTES = {
   Contact: 'Contact',
   ForgotPassword: 'ForgotPassword',
   Home: 'Home',
+  New: 'New',
   Login: 'Login',
   Logout: 'Logout',
   PendingConfirmation: 'PendingConfirmation',
@@ -72,6 +77,11 @@ const routes = [
     path: '/',
     component: Home,
     routeComponent: ProtectedRoute,
+  },
+  {
+    key: ROUTES.New,
+    path: '/phone/new',
+    component: New,
   },
   {
     key: ROUTES.Login,
